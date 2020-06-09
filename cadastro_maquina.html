@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>PI1A5 - Cadastro de Máquina</title>
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap/css/style.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+        <img src="icons/logo1.ico" width="30" height="30" class="d-inline-block align-top rounded-circle" alt="">
+        Contador de Produção
+        </a>
+    </nav>
+
+    <ul class="nav nav-pills nav-dark bg-dark">
+        <li class="nav-item">
+        <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cadastro</a>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="cadastrar_usuario.html">Usuário</a>
+            <a class="dropdown-item" href="cadastro_maquina.html">Máquina</a>
+            <a class="dropdown-item" href="cadastro_produto.html">Produto</a>
+            <a class="dropdown-item" href="cadastro_pedido.html">Pedido</a>
+            <a class="dropdown-item" href="cadastro_oderm_producao.html">Ordem de Produção</a>
+        </div>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#">Consulta</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#">Funcionário</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#">Produção</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#">Relatório</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#">Atividade</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#">Perfil</a>
+        </li>
+    </ul>
+  </header>
+
+  <div class="row">
+    <div class="col-sm-7 ">
+        <div class="news">
+          <!--Cadastro de Máquinas-->
+          <section>
+            <div class="card">
+              <div class="card-header">Cadastro de Máquina</div>
+              <div class="card-body">
+                <form>
+                  <div class="form-group">
+                    <div class="form-row">
+                      <div class="col">
+                        <label for="cod-maq">Código da Máquina:</label>
+                        <input type="text" class="form-control" placeholder="Digite o código da Máquina">
+                      </div>
+                      <div class="col">
+                        <label for="nome-maq">Nome da Máquina:</label>
+                        <input type="text" class="form-control" placeholder="Digite o nome da Máquina">
+                    </div>
+                  </div>
+                  
+
+                  <div class="form-group">
+                    <label for="tipo-maq">Tipo de Máquina:</label>
+                    <p>
+                        <label for="tipo-maq">
+                            <input type="radio" name="tipo-rotuladeira" value="Rotuladeira"> Rotuladeira
+                        </label>
+                        <label for="tipo-maq">
+                            <input type="radio" name="tipo-sopradora" value="Sopradora"> Sopradora
+                            <div class="form-row">
+                              <div class="col">
+                                <input type="text" class="form-control" placeholder="Cavidade">
+                              </div>
+                              <div class="col">
+                                <input type="text" class="form-control" placeholder="Ciclo">
+                              </div>
+                            </div>
+                        </label>
+                    </p>
+                  </div>
+                  
+                </form>
+                <a href="#" class="btn btn-primary">Finalizar</a>
+              </div>
+            </div>
+          </section>
+        </div>
+    </div>
+    <div class="col-sm-5">
+        <div class="news">
+          <!--Pesquisa Máquina-->
+          <section>
+            <div class="card">
+              <div class="card-header">
+                <nav class="navbar navbar-light bg-light">
+                  <form class="form-inline">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Código</span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="Digite o código da máquina" aria-label="CodMaquina" aria-describedby="basic-addon1">
+                    </div>
+                  </form>
+                </nav>
+              </div>
+                
+
+              <div class="card-body">
+                <div class="form-group input-group">
+                  
+                  <table class=" table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+    </div>
+  </div>
+  
+</body>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</html>

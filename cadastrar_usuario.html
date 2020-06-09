@@ -3,172 +3,245 @@
 <head>
     <meta charset="UTF-8">
     <title>PI1A5 - Cadastro de Usuário</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap/css/style.css" rel="stylesheet">
 </head>
 <body>
+    <header>
+        <!-- Cabeçalho -->
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+            <img src="icons/logo1.ico" width="30" height="30" class="d-inline-block align-top rounded-circle" alt="">
+            Contador de Produção
+            </a>
+        </nav>
     
-    <div>
-        <form action="">
-            <p>
-                <label for="">
-                    Nome Completo: <input type="text" name="Nome_Completo">
-                </label>
-            </p>
-            <p>
-                <label for="">
-                    Data de Nascimento: <input type="date" name="Data_Nascimento">
-                </label>
-            </p>
-            <fieldset>
-                <legend>Genero</legend>
-                    <p>
-                        <label for="genero">
-                            <input type="radio" name="genero" value="Masculino">Masculino
-                        </label>
-                        <label for="genero">
-                            <input type="radio" name="genero" value="Feminino">Feminino
-                        </label>
-                    <p>
-            </fieldset>
-            <fieldset>
-                <legend>Estado Civil</legend>
-                <p>
-                    <label for="estado_civil">
-                        <input type="radio" name="estado_civil" value="Casado">Casado
-                    </label>
-                </p>
-                <p>
-                    <label for="estado_civil">
-                        <input type="radio" name="estado_civil" value="Solteiro" >Solteiro
-                    </label>
-                </p>
-                <p>
-                    <label for="estado_civil">
-                        <input type="radio" name="estado_civil" value="Divorciado">Divorciado
-                    </label>
-                </p>
-                <p>
-                    <label for="estado_civil">
-                        <input type="radio" name="estado_civil" value="Viuvo">Viúvo
-                    </label>
-                </p>
-            </fieldset>
-            <form action="">
-                <p>
-                    <label for="">
-                        Naturalidade:
-                        <select name="naturalidade" multiple>
-                                <option value="Acre">Acre</option>
-                                <option value="Alagoas">Alagoas</option>
-                                <option value="Amapa">Amapá</option>
-                                <option value="Amazonas">Amazonas</option>
-                                <option value="Bahia">Bahia</option>
-                                <option value="Ceara">Ceará</option>
-                                <option value="Distrito Federal">Distrito Federal</option>
-                                <option value="Espirito Santo">Espírito Santo</option>
-                                <option value="Goias">Goiás</option>
-                                <option value="Maranhao">Maranhão</option>
-                                <option value="Mato Grosso">Mato Grosso</option>
-                                <option value="Mato Grosso do Sul">Mato Grosso do Su</option>
-                                <option value="Minas Gerais">Minas Gerais</option>
-                                <option value="Para">Pará</option>
-                                <option value="Paraiba">Paraíba</option>
-                                <option value="Paraná">Paraná</option>
-                                <option value="Pernambuco">Pernambuco</option>
-                                <option value="Piaui">Piauí</option>
-                                <option value="Rio de Janeiro">Rio de Janeiro</option>
-                                <option value="Rio Grande do Norte">Rio Grande do Norte</option>
-                                <option value="Rio Grande do Sul">Rio Grande do Sul</option>
-                                <option value="Rondonia">Rondônia</option>
-                                <option value="Roraima">Roraima</option>
-                                <option value="Santa Catarina">Santa Catarina</option>
-                                <option value="Sao Paulo">São Paulo</option>
-                                <option value="Sergipe">Sergipe</option>
-                                <option value="Tocantins">Tocantins</option>
-                        </select>
-                    </label>
-                </p>
-            </form>
-            
-            <p>
-                <label for="">
-                    Nacionalidade: <input type="text" name="nacionalidade">
-                </label>
-            </p>
-            
-            <p>
-                <label for="">
-                    Email: <input type="email" name="email">
-                </label>
-            </p>
-            <p>
-                <label for="">
-                    Telefone: <input type="phone" name="telefone">
-                </label>
-            </p>
-            <p>
-                <label for="">
-                    Endereço: <input type="text" name="endereco">
-                </label>
-            </p>
-            <p>
-                <label for="">
-                    CEP: <input type="text" name="cep">
-                </label>
-            </p>
-        </form>
-    </div>
-    <div>
-        <form action="">
-            <p>
-                <label for="">
-                    RG: <input type="text" name="rg">
-                </label>
-            </p>
-            <p>
-                <label for="">
-                    CPF: <input type="text" name="cpf">
-                </label>
-            </p>
-            <p>
-                <label for="">
-                    Título de eleitor: <input type="text" name="titulo_eleitor">
-                </label>
-            </p>
-            <p>
-                <label for="">
-                    CNH: <input type="text" name="cnh">
-                </label>
-            </p>
-        </form>
-    </div>
-    <div>
-        <form action="">
-            <p>
-                <label for="">
-                    CTPS: <input type="text" name="ctps">
-                </label>
-                <label for="">
-                    PIS: <input type="text" name="pis">
-                </label>
-            </p>
-            
-            <p>
-                <label for="">
-                    Admissão: <input type="date" name="admissao">
-                    Demissão: <input type="date" name="demissao">
-                </label>
-            </p>
-            <p>
-                <label for="">
-                    Cargo: <input type="text" name="cargo">
-                </label>
-            </p>
-            <p>
-                <label for="">
-                    Remuneração: <input type="text" name="remuneracao">
-                </label>
-            </p>
-        </form>
-    </div>
+        <ul class="nav nav-pills nav-dark bg-dark">
+            <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cadastro</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="cadastrar_usuario.html">Usuário</a>
+                <a class="dropdown-item" href="cadastro_maquina.html">Máquina</a>
+                <a class="dropdown-item" href="cadastro_produto.html">Produto</a>
+                <a class="dropdown-item" href="cadastro_pedido.html">Pedido</a>
+                <a class="dropdown-item" href="cadastro_oderm_producao.html">Ordem de Produção</a>
+            </div>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Consulta</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Funcionário</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Produção</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Relatório</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Atividade</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Perfil</a>
+            </li>
+        </ul>
+    </header>
+
+    <!--Corpo da página-->
+    <section>
+        <div class="row">
+          <div class="col-sm-7 ">
+                <div class="news">
+                    <div class="card">
+                        <!--Cadastro de Usuários-->
+                        <div class="card-header">
+                            Cadastro de Usuário
+                        </div>
+                        <div class="card-body">
+                            <section>
+                                <form class="card">
+                                    <!--Nome-->
+                                    <div class="form-group">
+                                        <label for="nome">Nome</label>
+                                        <input type="name" class="form-control" id="nome">
+                                    </div>
+                                    <!--Data de Nascimento-->
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col">
+                                                <label for="dataNascimento">Data de Nascimento</label>
+                                                <input type="date" class="form-control" id='dataNascimento'>
+                                            </div>
+                                            <div class="col">
+                                                <label for="">
+                                                    Naturalidade:
+                                                    <select name="naturalidade" multiple>
+                                                            <option value="Acre">Acre</option>
+                                                            <option value="Alagoas">Alagoas</option>
+                                                            <option value="Amapa">Amapá</option>
+                                                            <option value="Amazonas">Amazonas</option>
+                                                            <option value="Bahia">Bahia</option>
+                                                            <option value="Ceara">Ceará</option>
+                                                            <option value="Distrito Federal">Distrito Federal</option>
+                                                            <option value="Espirito Santo">Espírito Santo</option>
+                                                            <option value="Goias">Goiás</option>
+                                                            <option value="Maranhao">Maranhão</option>
+                                                            <option value="Mato Grosso">Mato Grosso</option>
+                                                            <option value="Mato Grosso do Sul">Mato Grosso do Su</option>
+                                                            <option value="Minas Gerais">Minas Gerais</option>
+                                                            <option value="Para">Pará</option>
+                                                            <option value="Paraiba">Paraíba</option>
+                                                            <option value="Paraná">Paraná</option>
+                                                            <option value="Pernambuco">Pernambuco</option>
+                                                            <option value="Piaui">Piauí</option>
+                                                            <option value="Rio de Janeiro">Rio de Janeiro</option>
+                                                            <option value="Rio Grande do Norte">Rio Grande do Norte</option>
+                                                            <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+                                                            <option value="Rondonia">Rondônia</option>
+                                                            <option value="Roraima">Roraima</option>
+                                                            <option value="Santa Catarina">Santa Catarina</option>
+                                                            <option value="Sao Paulo">São Paulo</option>
+                                                            <option value="Sergipe">Sergipe</option>
+                                                            <option value="Tocantins">Tocantins</option>
+                                                    </select>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Genero e Estado Civil-->
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                        <div class="col">
+                                                <fieldset>
+                                                    <legend>Gênero</legend>
+                                                    <label for="genero">
+                                                        <input type="radio" name="genero" value="Masculino">Masculino
+                                                    </label>
+                                                    <label for="genero">
+                                                        <input type="radio" name="genero" value="Feminino">Feminino
+                                                    </label>
+                                                </fieldset>
+                                        </div>
+                                        <div class="col">
+                                                <fieldset>
+                                                    <legend>Estado Civil</legend>
+                                                    <label for="estado_civil">
+                                                        <input type="radio" name="estado_civil" value="Casado">Casado
+                                                    </label>
+                                                    <label for="estado_civil">
+                                                        <input type="radio" name="estado_civil" value="Solteiro" >Solteiro
+                                                    </label>
+                                                    <label for="estado_civil">
+                                                        <input type="radio" name="estado_civil" value="Divorciado">Divorciado
+                                                    </label>
+                                                    <label for="estado_civil">
+                                                        <input type="radio" name="estado_civil" value="Viuvo">Viúvo
+                                                    </label>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Email-->
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input type="email" class="form-control" id="email">
+                                    </div>
+                                    <!--telefone-->
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col">
+                                                <label for="telefone">Telefone</label>
+                                                <input type="text" class="form-control" id="telefone">
+                                            </div>
+                                            <div class="col">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Endereço e CEP-->
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col">
+                                                <label for="endereco">Endereço</label>
+                                                <input type="text" class="form-control" id="endereco">
+                                            </div>
+                                            <div class="col">
+                                                <label for="cep">CEP</label>
+                                                <input type="text" class="form-control" id="cep">
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <!--RG e CPF-->
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col">
+                                            <label for="rg">RG</label>
+                                            <input type="text" class="form-control" id="rg">
+                                            </div>
+                                            <div class="col">
+                                                <label for="cpf">CPF</label>
+                                                <input type="text" class="form-control" id="cpf">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Data de Admissão e Cargo-->
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col">
+                                                <label for="dataAdmissao">Data de Admissão</label>
+                                                <input type="date" class="form-control" id='dataAdmissao'>
+                                            </div>
+                                            <div class="col">
+                                                <label for="cargo">Cargo</label>
+                                                <input type="text" class="form-control" id="cargo">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </section>
+        
+                            <button type="button" class="btn btn-primary btn-sm">Salvar</button>
+                            <button type="button" class="btn btn-secondary btn-sm">Cancelar</button>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                
+          </div>
+          <div class="col-sm-5">
+                <div class="news">
+                    <div class="card">
+                        <div class="card-header">
+                            <p>Perfil do Usuário</p>
+                        </div>
+                        <div class="card-body">
+                            <p>corpo</p>
+                            <button type="button" class="btn btn-primary btn-sm">Editar</button>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                
+          </div>
+        </div>
+      </section>
+
+    
+   
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>
