@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../bootstrap/css/style.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <!-- Cabeçalho -->
+    <header>
+      <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+          <img src="../icons/logo1.ico" width="30" height="30" class="d-inline-block align-top rounded-circle" alt="">
+          Contador de Produção
+        </a>
+      </nav>
+  
+      <ul class="nav nav-pills nav-dark bg-dark">
+        <li class="nav-item">
+          <a class="nav-link" href="home.html">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cadastro</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="cadastro_usuario.html">Usuário</a>
+            <a class="dropdown-item" href="cadastro_maquina.html">Máquina</a>
+            <a class="dropdown-item" href="cadastro_produto.html">Produto</a>
+            <a class="dropdown-item" href="cadastro_pedido.html">Pedido</a>
+            <a class="dropdown-item" href="cadastro_ordem_producao.html">Ordem de Produção</a>
+            <a class="dropdown-item" href="cadastro_cliente.html">Cliente</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Consulta</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Funcionário</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Produção</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Relatório</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Atividade</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Perfil</a>
+        </li>
+      </ul>
+    </header>
+
+    <!--Corpo da página-->
+    <section>
+      <div class="row">
+        <div class="col-sm-7 ">
+            <div class="news">
+              <div class="card bg-light mb-3">
+                <!--Cadastro de Pedido-->
+                <div class="card-header">
+                  Cadastro de Pedido
+                </div>
+                <div class="card-body">
+                  <section>
+                    <form class="card">
+                      <!--Código de Pedido-->
+                      <div class="form-group">
+                        <div class="form-row">
+                          <div class="col mx-2">
+                            <label for="codPedido">Código de Pedido</label>
+                            <input type="text" class="form-control" id='codPedido'>
+                          </div>
+                          <div class="col mx-2">
+                            <label for="cpfUsuario">CPF do Solicitante</label>
+                            <input type="text" class="form-control" id='cpfUsuario'>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </section>
+                </div>
+                <div class="card-body">
+                  <section>
+                    <form class="card">
+                      <!--Produto-->
+                      <section>
+                        <div class="form-group">
+                          <div class="form-row">
+                            <div class="col mx-2">
+                              <label for="codProduto">Código de Produto</label>
+                              <select class="form-control" id="codProduto">
+                                <option>P001</option>
+                                <option>P002</option>
+                                <option>P003</option>
+                                <option>P004</option>
+                                <option>P005</option>
+                                <option>P006</option>
+                              </select>
+                            </div>
+                            <div class="col mx-2">
+                              <label for="quantProduto">Quantidade</label>
+                              <input type="text" class="form-control" id='quantProduto'>
+                            </div>
+                            <div class="col max-2">
+                              <label for="rotulagem">Rotulagem</label>
+                              <p></p>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="" id="ativado">
+                                <label class="form-check-label" for="ativado">
+                                  Ativado
+                                </label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="" id="desativado">
+                                <label class="form-check-label" for="mdesativado">
+                                  Desativado
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="form-row">
+                            <div class="col mx-2">
+                              <label for="corProduto">Cor do Produto</label>
+                              <select class="form-control" id="corProduto">
+                                <option>Azul</option>
+                                <option>Amarelo</option>
+                                <option>Vermelho</option>
+                                <option>Preto</option>
+                                <option>Branco</option>
+                                <option>Transparente</option>
+                              </select>
+                            </div>
+                            <div class="col mx-2">
+                              <label for="dataSolicitacaoPedido">Data de Solicitação</label>
+                              <input type="date" class="form-control" id='dataSolicitacaoPedido'>
+                            </div>
+                            <div class="col mx-2">
+                              <label for="dataEntrega">Data de Entrega</label>
+                              <input type="date" class="form-control" id='dataEntrega'>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                      <!--Botão de adicionar-->
+                      <div class="form-group row">
+                        <div class="col mx-2 text-right">
+                          <button type="submit" class="btn btn-primary">Adicionar</button>
+                        </div>
+                      </div>
+                    </form>
+                    <!--Planilha de Pedido-->
+                    <section>
+                      <div class="card mx-.75">
+                        <table class=" table table-striped">
+                          <thead>
+                            <tr>
+                              <th scope="col">Cód Produto</th>
+                              <th scope="col">Cliente</th>
+                              <th scope="col">Quant.</th>
+                              <th scope="col">Rotulagem</th>
+                              <th scope="col">Cor</th>
+                              <th scope="col">Data Solicitação</th>
+                              <th scope="col">Data Entrega</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">P001</th>
+                              <th>Vigor</th>
+                              <th>15000</th>
+                              <th>sim</th>
+                              <th>Branco</th>
+                              <th>12/06/2020</th>
+                              <th>20/06/2020</th>
+                            </tr>
+                            <tr>
+                              <th scope="row">P025</th>
+                              <th>Xandô</th>
+                              <th>35000</th>
+                              <th>não</th>
+                              <th>Preto</th>
+                              <th>12/06/2020</th>
+                              <th>30/06/2020</th>
+                            </tr>
+                            <tr>
+                              <th scope="row">P017</th>
+                              <th>Multiplos</th>
+                              <th>240000</th>
+                              <th>não</th>
+                              <th>Azul</th>
+                              <th>16/05/2020</th>
+                              <th>12/06/2020</th>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </section>
+                </div>
+              </div>
+              
+            </div>
+        </div>
+        <div class="col-sm-5">
+            <div class="news">
+              
+            </div>
+        </div>
+      </div>
+    </section>
+
+    
+  </body>
+
+  <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</html>

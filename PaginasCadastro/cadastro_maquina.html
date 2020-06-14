@@ -4,51 +4,53 @@
     <meta charset="UTF-8">
     <title>PI1A5 - Cadastro de Máquina</title>
     <!-- Bootstrap -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="bootstrap/css/style.css" rel="stylesheet">
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../bootstrap/css/style.css" rel="stylesheet">
 </head>
 <body>
+
   <!-- Cabeçalho -->
   <header>
     <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand" href="#">
-        <img src="icons/logo1.ico" width="30" height="30" class="d-inline-block align-top rounded-circle" alt="">
+      <a class="navbar-brand" href="home.html">
+        <img src="../icons/logo1.ico" width="30" height="30" class="d-inline-block align-top rounded-circle" alt="">
         Contador de Produção
-        </a>
+      </a>
     </nav>
 
     <ul class="nav nav-pills nav-dark bg-dark">
-        <li class="nav-item">
-        <a class="nav-link" href="#">Home</a>
-        </li>
-        <li class="nav-item dropdown">
+      <li class="nav-item">
+        <a class="nav-link" href="home.html">Home</a>
+      </li>
+      <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cadastro</a>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="cadastrar_usuario.html">Usuário</a>
-            <a class="dropdown-item" href="cadastro_maquina.html">Máquina</a>
-            <a class="dropdown-item" href="cadastro_produto.html">Produto</a>
-            <a class="dropdown-item" href="cadastro_pedido.html">Pedido</a>
-            <a class="dropdown-item" href="cadastro_oderm_producao.html">Ordem de Produção</a>
+          <a class="dropdown-item" href="cadastro_usuario.html">Usuário</a>
+          <a class="dropdown-item" href="cadastro_maquina.html">Máquina</a>
+          <a class="dropdown-item" href="cadastro_produto.html">Produto</a>
+          <a class="dropdown-item" href="cadastro_pedido.html">Pedido</a>
+          <a class="dropdown-item" href="cadastro_ordem_producao.html">Ordem de Produção</a>
+          <a class="dropdown-item" href="cadastro_cliente.html">Cliente</a>
         </div>
-        </li>
-        <li class="nav-item">
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="#">Consulta</a>
-        </li>
-        <li class="nav-item">
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="#">Funcionário</a>
-        </li>
-        <li class="nav-item">
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="#">Produção</a>
-        </li>
-        <li class="nav-item">
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="#">Relatório</a>
-        </li>
-        <li class="nav-item">
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="#">Atividade</a>
-        </li>
-        <li class="nav-item">
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="#">Perfil</a>
-        </li>
+      </li>
     </ul>
   </header>
 
@@ -61,6 +63,7 @@
               <div class="card-header">Cadastro de Máquina</div>
               <div class="card-body">
                 <form>
+                  <!--Código da Máquina-->
                   <div class="form-group">
                     <div class="form-row">
                       <div class="col">
@@ -68,28 +71,35 @@
                         <input type="text" class="form-control" placeholder="Digite o código da Máquina">
                       </div>
                       <div class="col">
-                        <label for="nome-maq">Nome da Máquina:</label>
-                        <input type="text" class="form-control" placeholder="Digite o nome da Máquina">
+                      </div>
                     </div>
                   </div>
-                  
-
+                  <!--Nome da Máquina-->
+                  <div class="form-group">
+                    <label for="nome-maq">Nome da Máquina:</label>
+                    <input type="text" class="form-control" placeholder="Digite o nome da Máquina">
+                  </div>
+                  <!--Tipo de Máquina-->
                   <div class="form-group">
                     <label for="tipo-maq">Tipo de Máquina:</label>
                     <p>
                         <label for="tipo-maq">
                             <input type="radio" name="tipo-rotuladeira" value="Rotuladeira"> Rotuladeira
                         </label>
-                        <label for="tipo-maq">
-                            <input type="radio" name="tipo-sopradora" value="Sopradora"> Sopradora
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Cavidade">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Ciclo">
+                        <label for="tipo-maq">                 
+                          <input type="radio" name="tipo-sopradora" value="Sopradora"> Sopradora
+
+                            <div class="card border-info m-3">
+                              <div class="form-row">
+                                <div class="col m-2">
+                                  <input type="text" class="form-control" placeholder="Cavidade">
+                                </div>
+                                <div class="col m-2">
+                                  <input type="text" class="form-control" placeholder="Ciclo">
+                                </div>
                               </div>
                             </div>
+                            
                         </label>
                     </p>
                   </div>
