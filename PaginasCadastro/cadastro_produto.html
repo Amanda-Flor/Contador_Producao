@@ -5,53 +5,60 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
-    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../bootstrap/css/style.css" rel="stylesheet">
+    <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../bootstrap/css/style.css" rel="stylesheet">
   </head>
-  <body>
-
+  <body class="bg-light">
+    
     <!-- Cabeçalho -->
     <header>
-      <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand" href="home.html">
-          <img src="../icons/logo1.ico" width="30" height="30" class="d-inline-block align-top rounded-circle" alt="">
-          Contador de Produção
-        </a>
-      </nav>
-  
-      <ul class="nav nav-pills nav-dark bg-dark">
-        <li class="nav-item">
-          <a class="nav-link" href="home.html">Home</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cadastro</a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="cadastro_usuario.html">Usuário</a>
-            <a class="dropdown-item" href="cadastro_maquina.html">Máquina</a>
-            <a class="dropdown-item" href="cadastro_produto.html">Produto</a>
-            <a class="dropdown-item" href="cadastro_pedido.html">Pedido</a>
-            <a class="dropdown-item" href="cadastro_ordem_producao.html">Ordem de Produção</a>
-            <a class="dropdown-item" href="cadastro_cliente.html">Cliente</a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Consulta</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Funcionário</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Produção</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Relatório</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Atividade</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Perfil</a>
-        </li>
+      <ul class="nav nav-pills navbar-light bg-light">
+          <a class="navbar-brand" href="home.html">
+              <img src="../../icons/logo1.ico" width="50" height="50" class="d-inline-block align-top rounded-circle" alt="">
+          </a>
+          <li class="nav-item">
+              <a class="nav-link" href="../home.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cadastro</a>
+              <div class="dropdown-menu">
+              <a class="dropdown-item" href="../PaginasCadastro/cadastro_usuario.html">Usuário</a>
+              <a class="dropdown-item" href="../PaginasCadastro/cadastro_maquina.html">Máquina</a>
+              <a class="dropdown-item" href="../PaginasCadastro/cadastro_produto.html">Produto</a>
+              <a class="dropdown-item" href="../PaginasCadastro/cadastro_pedido.html">Pedido</a>
+              <a class="dropdown-item" href="../PaginasCadastro/cadastro_ordem_producao.html">Ordem de Produção</a>
+              <a class="dropdown-item" href="../PaginasCadastro/cadastro_cliente.html">Cliente</a>
+              </div>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">Consulta</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Produção</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Relatório</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pedido</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Máquina</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Funcionário</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Atividade</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Perfil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Sair</a>
+            </li>
+          </ul>
       </ul>
     </header>
 
@@ -59,8 +66,8 @@
     <section>
       <div class="row">
         <div class="col-sm-7 ">
-            <div class="news">
-              <div class="card bg-light mb-3">
+            <div class="news m-1">
+              <div class="card mb-3">
                 <!--Cadastro de Produto-->
                 <div class="card-header">
                   Cadastro de Produto
@@ -149,6 +156,13 @@
                           </select>
                       </div>
                     </form>
+                    <!--Botão de Salvar e Canelar-->
+                    <div class="form-group row">
+                      <div class="col m-2 text-right">
+                      <button type="submit" class="btn btn-primary">Salvar</button>
+                      <button type="submit" class="btn btn-secondary">Cancelar</button>
+                      </div>
+                  </div>
                   </section>
 
                 </div>
@@ -157,8 +171,69 @@
             </div>
         </div>
         <div class="col-sm-5">
-            <div class="card">
-                <h5>Parte 2</h5>
+            <div class="nwe m-1">
+              <div class="card">
+                <div class="card-header">
+                  Pesquisa de Produto
+                </div>
+                <div class="card-body">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="codProduto">Produto</span>
+                    <input type="text" class="form-control" placeholder="Digite o código do produto" aria-label="codProduto" aria-describedby="basic-addon1">
+                </div>
+                <div class="card">
+                  <div class="form-group input-group">
+                    <table class=" table table-striped">
+                      <thead>
+                        <tr>
+                            <th scope="col">Cód.</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Material</th>
+                            <th scope="col">Quant./Lote</th>
+                            <th scope="col">Máquina</th>
+                            <th scope="col">Cliente</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">P001</th>
+                          <td>Produto 01</td>
+                          <td>Polímero</td>
+                          <td>55</td>
+                          <td>M001</td>
+                          <td>Vigor</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">P002</th>
+                          <td>Produto 02</td>
+                          <td>Polímero</td>
+                          <td>100</td>
+                          <td>M002</td>
+                          <td>Vigor</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">P003</th>
+                          <td>Produto 03</td>
+                          <td>Polímero</td>
+                          <td>150</td>
+                          <td>M001</td>
+                          <td>Vigor</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                </div>
+                </div>
+                  <!--Botão de Editar e Inabilitar-->
+                  <div class="form-group row">
+                    <div class="col m-2 text-right">
+                    <button type="submit" class="btn btn-primary">Editar</button>
+                    <button type="submit" class="btn btn-secondary">Inabilitar</button>
+                    </div>
+                </div>
+                </div>
+              </div>
             </div>
         </div>
       </div>

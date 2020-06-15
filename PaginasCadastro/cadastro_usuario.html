@@ -1,265 +1,334 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>PI1A5 - Cadastro de Usuário</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap -->
-    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../bootstrap/css/style.css" rel="stylesheet">
-</head>
-<body>
 
-    <!-- Cabeçalho -->
-    <header>
-        <nav class="navbar navbar-light bg-light">
-            <a class="navbar-brand" href="home.html">
-                <img src="../icons/logo1.ico" width="30" height="30" class="d-inline-block align-top rounded-circle" alt="">
-                Contador de Produção
-            </a>
-        </nav>
-    
-        <ul class="nav nav-pills nav-dark bg-dark">
-            <li class="nav-item">
-                <a class="nav-link" href="home.html">Home</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cadastro</a>
-                <div class="dropdown-menu">
-                <a class="dropdown-item" href="cadastro_usuario.html">Usuário</a>
-                <a class="dropdown-item" href="cadastro_maquina.html">Máquina</a>
-                <a class="dropdown-item" href="cadastro_produto.html">Produto</a>
-                <a class="dropdown-item" href="cadastro_pedido.html">Pedido</a>
-                <a class="dropdown-item" href="cadastro_ordem_producao.html">Ordem de Produção</a>
-                <a class="dropdown-item" href="cadastro_cliente.html">Cliente</a>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Consulta</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Funcionário</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Produção</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Relatório</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Atividade</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Perfil</a>
-            </li>
-        </ul>
-    </header>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap -->
+        <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../bootstrap/css/style.css" rel="stylesheet">
+    </head>
+    <body class="bg-light">
+        
+        <!-- Cabeçalho -->
+        <header>
+          <ul class="nav nav-pills navbar-light bg-light">
+              <a class="navbar-brand" href="home.html">
+                  <img src="../../icons/logo1.ico" width="50" height="50" class="d-inline-block align-top rounded-circle" alt="">
+              </a>
+              <li class="nav-item">
+                  <a class="nav-link" href="../home.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cadastro</a>
+                  <div class="dropdown-menu">
+                  <a class="dropdown-item" href="../PaginasCadastro/cadastro_usuario.html">Usuário</a>
+                  <a class="dropdown-item" href="../PaginasCadastro/cadastro_maquina.html">Máquina</a>
+                  <a class="dropdown-item" href="../PaginasCadastro/cadastro_produto.html">Produto</a>
+                  <a class="dropdown-item" href="../PaginasCadastro/cadastro_pedido.html">Pedido</a>
+                  <a class="dropdown-item" href="../PaginasCadastro/cadastro_ordem_producao.html">Ordem de Produção</a>
+                  <a class="dropdown-item" href="../PaginasCadastro/cadastro_cliente.html">Cliente</a>
+                  </div>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Consulta</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Produção</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Relatório</a>
+                </li>
+                
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Pedido</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Máquina</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Funcionário</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Atividade</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Perfil</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="login.html">Sair</a>
+                </li>
+              </ul>
+          </ul>
+        </header>
 
-    <!--Corpo da página-->
-    <section>
-        <div class="row">
-          <div class="col-sm-7 ">
-                <div class="news">
-                    <div class="card bg-light mb-3" >
-                        <!--Cadastro de Usuários-->
-                        <div class="card-header">
-                            Cadastro de Usuário
-                        </div>
-                        <div class="card-body">
-                            <section>
-                                <form class="card">
-                                    <!--Nome-->
-                                    <div class="form-group mx-2">
-                                        <label for="nome">Nome</label>
-                                        <input type="text" class="form-control" id="nome">
-                                    </div>
-                                    <!--Data de Nascimento e Telefone-->
-                                    <div class="form-group">
-                                        <div class="form-row">
-                                            <div class="col mx-2">
-                                                <label for="dataNascimento">Data de Nascimento</label>
-                                                <input type="date" class="form-control" id='dataNascimento'>
-                                            </div>
-                                            <div class="col mx-2">
-                                                <label for="telefone">Telefone</label>
-                                                <input type="text" class="form-control" id="telefone">
-                                            </div>
+        <!--Corpo da página-->
+        <section>
+            <div class="row  m-1">
+            <!--Cadastro de Usuários-->
+            <div class="col-sm-5">
+                    <div class="news">
+                        <div class="card mb-3" >
+                            <div class="card-header">
+                                Cadastro de Usuário
+                            </div>
+                            <div class="card-body">
+                                <section>
+                                    <form class="card">
+                                        <!--Nome-->
+                                        <div class="form-group mx-2">
+                                            <label for="nome">Nome</label>
+                                            <input type="text" class="form-control" id="nome">
                                         </div>
-                                    </div>
-                                    <!--Naturalidade-->
-                                    <div class="form-group mx-2">
-                                        <label for="naturalidade">Naturalidade</label>
-                                        <select class="form-control" id="naturalidade">
-                                            <option value="Acre">Acre</option>
-                                            <option value="Alagoas">Alagoas</option>
-                                            <option value="Amapa">Amapá</option>
-                                            <option value="Amazonas">Amazonas</option>
-                                            <option value="Bahia">Bahia</option>
-                                            <option value="Ceara">Ceará</option>
-                                            <option value="Distrito Federal">Distrito Federal</option>
-                                            <option value="Espirito Santo">Espírito Santo</option>
-                                            <option value="Goias">Goiás</option>
-                                            <option value="Maranhao">Maranhão</option>
-                                            <option value="Mato Grosso">Mato Grosso</option>
-                                            <option value="Mato Grosso do Sul">Mato Grosso do Su</option>
-                                            <option value="Minas Gerais">Minas Gerais</option>
-                                            <option value="Para">Pará</option>
-                                            <option value="Paraiba">Paraíba</option>
-                                            <option value="Paraná">Paraná</option>
-                                            <option value="Pernambuco">Pernambuco</option>
-                                            <option value="Piaui">Piauí</option>
-                                            <option value="Rio de Janeiro">Rio de Janeiro</option>
-                                            <option value="Rio Grande do Norte">Rio Grande do Norte</option>
-                                            <option value="Rio Grande do Sul">Rio Grande do Sul</option>
-                                            <option value="Rondonia">Rondônia</option>
-                                            <option value="Roraima">Roraima</option>
-                                            <option value="Santa Catarina">Santa Catarina</option>
-                                            <option value="Sao Paulo">São Paulo</option>
-                                            <option value="Sergipe">Sergipe</option>
-                                            <option value="Tocantins">Tocantins</option>
-                                        </select>
-                                    </div>
-                                    <!--Genero e Estado Civil-->
-                                    <div class="form-group">
-                                        <div class="form-row">
-                                        <div class="col mx-2">
-                                                <fieldset>
-                                                    <legend>Gênero</legend>
-                                                    <label for="genero">
-                                                        <input type="radio" name="genero" value="Masculino">Masculino
-                                                    </label>
-                                                    <label for="genero">
-                                                        <input type="radio" name="genero" value="Feminino">Feminino
-                                                    </label>
-                                                </fieldset>
-                                        </div>
-                                        <div class="col mx-2">
-                                                <fieldset>
-                                                    <legend>Estado Civil</legend>
-                                                    <label for="estado_civil">
-                                                        <input type="radio" name="estado_civil" value="Casado">Casado
-                                                    </label>
-                                                    <label for="estado_civil">
-                                                        <input type="radio" name="estado_civil" value="Solteiro" >Solteiro
-                                                    </label>
-                                                    <label for="estado_civil">
-                                                        <input type="radio" name="estado_civil" value="Divorciado">Divorciado
-                                                    </label>
-                                                    <label for="estado_civil">
-                                                        <input type="radio" name="estado_civil" value="Viuvo">Viúvo
-                                                    </label>
-                                                </fieldset>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--Endereço e CEP-->
-                                    <div class="form-group">
-                                        <div class="form-row">
-                                            <div class="col mx-2">
-                                                <label for="endereco">Endereço</label>
-                                                <input type="text" class="form-control" id="endereco">
-                                            </div>
-                                            <div class="col mx-2">
-                                                <label for="cep">CEP</label>
-                                                <input type="text" class="form-control" id="cep">
-                                            </div>
-                                        </div>
-                                        
-                                    </div>
-                                    <!--RG e CPF-->
-                                    <div class="form-group">
-                                        <div class="form-row">
-                                            <div class="col mx-2">
-                                            <label for="rg">RG</label>
-                                            <input type="text" class="form-control" id="rg">
-                                            </div>
-                                            <div class="col mx-2">
-                                                <label for="cpf">CPF</label>
-                                                <input type="text" class="form-control" id="cpf">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--Data de Admissão e Cargo-->
-                                    <div class="form-group">
-                                        <div class="form-row">
-                                            <div class="col mx-2">
-                                                <label for="dataAdmissao">Data de Admissão</label>
-                                                <input type="date" class="form-control" id='dataAdmissao'>
-                                            </div>
-                                            <div class="col mx-2">
-                                                <label for="cargo">Cargo</label>
-                                                <input type="text" class="form-control" id="cargo">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--Tipo de Acesso-->
-                                    <div class="form-group mx-2">
-                                        <label for="acesso">Tipo de Acesso</label>
-                                        <input type="text" class="form-control" id="acesso">
-                                    </div>
-                                    <!--Informações de Acesso-->
-                                    <div class="card text-white bg-info mx-2 ">
+                                        <!--Data de Nascimento e Telefone-->
                                         <div class="form-group">
-                                            <!--Email-->
-                                            <div class="form-group mx-2">
-                                                <label for="email">Email</label>
-                                                <input type="email" class="form-control" id="email">
-                                            </div>
-                                            <!--Senha-->
-                                            <div class="form-group">
-                                                <div class="form-row">
-                                                    <div class="col mx-2">
-                                                        <label for="senha">Senha</label>
-                                                        <input type="password" class="form-control" id="senha">
-                                                    </div>
-                                                    <div class="col mx-2">
-                                                        <label for="senha1">Confirmar Senha</label>
-                                                        <input type="password" class="form-control" id="senha1">
-                                                    </div>
+                                            <div class="form-row">
+                                                <div class="col mx-2">
+                                                    <label for="dataNascimento">Data de Nascimento</label>
+                                                    <input type="date" class="form-control" id='dataNascimento'>
+                                                </div>
+                                                <div class="col mx-2">
+                                                    <label for="telefone">Telefone</label>
+                                                    <input type="text" class="form-control" id="telefone">
                                                 </div>
                                             </div>
                                         </div>
+                                        <!--Naturalidade-->
+                                        <div class="form-group mx-2">
+                                            <label for="naturalidade">Naturalidade</label>
+                                            <select class="form-control" id="naturalidade">
+                                                <option value="Acre">Acre</option>
+                                                <option value="Alagoas">Alagoas</option>
+                                                <option value="Amapa">Amapá</option>
+                                                <option value="Amazonas">Amazonas</option>
+                                                <option value="Bahia">Bahia</option>
+                                                <option value="Ceara">Ceará</option>
+                                                <option value="Distrito Federal">Distrito Federal</option>
+                                                <option value="Espirito Santo">Espírito Santo</option>
+                                                <option value="Goias">Goiás</option>
+                                                <option value="Maranhao">Maranhão</option>
+                                                <option value="Mato Grosso">Mato Grosso</option>
+                                                <option value="Mato Grosso do Sul">Mato Grosso do Su</option>
+                                                <option value="Minas Gerais">Minas Gerais</option>
+                                                <option value="Para">Pará</option>
+                                                <option value="Paraiba">Paraíba</option>
+                                                <option value="Paraná">Paraná</option>
+                                                <option value="Pernambuco">Pernambuco</option>
+                                                <option value="Piaui">Piauí</option>
+                                                <option value="Rio de Janeiro">Rio de Janeiro</option>
+                                                <option value="Rio Grande do Norte">Rio Grande do Norte</option>
+                                                <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+                                                <option value="Rondonia">Rondônia</option>
+                                                <option value="Roraima">Roraima</option>
+                                                <option value="Santa Catarina">Santa Catarina</option>
+                                                <option value="Sao Paulo">São Paulo</option>
+                                                <option value="Sergipe">Sergipe</option>
+                                                <option value="Tocantins">Tocantins</option>
+                                            </select>
+                                        </div>
+                                        <!--Genero e Estado Civil-->
+                                        <div class="form-group">
+                                            <div class="form-row">
+                                            <div class="col mx-2">
+                                                    <fieldset>
+                                                        <legend>Gênero</legend>
+                                                        <label for="genero">
+                                                            <input type="radio" name="genero" value="Masculino">Masculino
+                                                        </label>
+                                                        <label for="genero">
+                                                            <input type="radio" name="genero" value="Feminino">Feminino
+                                                        </label>
+                                                    </fieldset>
+                                            </div>
+                                            <div class="col mx-2">
+                                                    <fieldset>
+                                                        <legend>Estado Civil</legend>
+                                                        <label for="estado_civil">
+                                                            <input type="radio" name="estado_civil" value="Casado">Casado
+                                                        </label>
+                                                        <label for="estado_civil">
+                                                            <input type="radio" name="estado_civil" value="Solteiro" >Solteiro
+                                                        </label>
+                                                        <label for="estado_civil">
+                                                            <input type="radio" name="estado_civil" value="Divorciado">Divorciado
+                                                        </label>
+                                                        <label for="estado_civil">
+                                                            <input type="radio" name="estado_civil" value="Viuvo">Viúvo
+                                                        </label>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--Endereço e CEP-->
+                                        <div class="form-group">
+                                            <div class="form-row">
+                                                <div class="col mx-2">
+                                                    <label for="endereco">Endereço</label>
+                                                    <input type="text" class="form-control" id="endereco">
+                                                </div>
+                                                <div class="col mx-2">
+                                                    <label for="cep">CEP</label>
+                                                    <input type="text" class="form-control" id="cep">
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        <!--RG e CPF-->
+                                        <div class="form-group">
+                                            <div class="form-row">
+                                                <div class="col mx-2">
+                                                <label for="rg">RG</label>
+                                                <input type="text" class="form-control" id="rg">
+                                                </div>
+                                                <div class="col mx-2">
+                                                    <label for="cpf">CPF</label>
+                                                    <input type="text" class="form-control" id="cpf">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--Data de Admissão e Cargo-->
+                                        <div class="form-group">
+                                            <div class="form-row">
+                                                <div class="col mx-2">
+                                                    <label for="dataAdmissao">Data de Admissão</label>
+                                                    <input type="date" class="form-control" id='dataAdmissao'>
+                                                </div>
+                                                <div class="col mx-2">
+                                                    <label for="cargo">Cargo</label>
+                                                    <input type="text" class="form-control" id="cargo">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--Tipo de Acesso-->
+                                        <div class="form-group mx-2">
+                                            <label for="acesso">Tipo de Acesso</label>
+                                            <input type="text" class="form-control" id="acesso">
+                                        </div>
+                                        <!--Informações de Acesso-->
+                                        <div class="card bg-light m-2 ">
+                                            <div class="form-group">
+                                                <!--Email-->
+                                                <div class="form-group mx-2">
+                                                    <label for="email">Email</label>
+                                                    <input type="email" class="form-control" id="email">
+                                                </div>
+                                                <!--Senha-->
+                                                <div class="form-group">
+                                                    <div class="form-row">
+                                                        <div class="col mx-2">
+                                                            <label for="senha">Senha</label>
+                                                            <input type="password" class="form-control" id="senha">
+                                                        </div>
+                                                        <div class="col mx-2">
+                                                            <label for="senha1">Confirmar Senha</label>
+                                                            <input type="password" class="form-control" id="senha1">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
 
+                                        </div>
+                                    </form>
+                                </section>
+                                <!--Botão de Salvar e Canelar-->
+                                <div class="form-group row">
+                                    <div class="col m-2 text-right">
+                                    <button type="submit" class="btn btn-primary">Salvar</button>
+                                    <button type="submit" class="btn btn-secondary">Cancelar</button>
                                     </div>
-                                </form>
-                            </section>
-        
-                            <button type="button" class="btn btn-primary btn-sm">Salvar</button>
-                            <button type="button" class="btn btn-secondary btn-sm">Cancelar</button>
+                                </div>
+                            </div>
                         </div>
+                        
+                        
                     </div>
                     
-                    
-                </div>
-                
-          </div>
-          <div class="col-sm-5">
+            </div>
+            <!--Pesquisa Máquina-->
+            <div class="col-sm-7">
                 <div class="news">
-                    <div class="card bg-light mb-3">
-                        <div class="card-header">
-                            <p>Perfil do Usuário</p>
+                    <section>
+                        <div class="card">
+                            <div class="card-header">
+                                Pesquisa de Usuário
+                            </div>
+                            <div class="card-body">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="cpf">Usuário</span>
+                                    <input type="text" class="form-control" placeholder="Digite o código da máquina" aria-label="cpf" aria-describedby="basic-addon1">
+                                </div>
+                                <div class="card">
+                                    <div class="form-group input-group">
+                                        <table class=" table table-striped">
+                                            <thead>
+                                            <tr>
+                                                <th scope="col">Núm.</th>
+                                                <th scope="col">Nome</th>
+                                                <th scope="col">Nascimento</th>
+                                                <th scope="col">Telefone</th>
+                                                <th scope="col">Estado Civil</th>
+                                                <th scope="col">Cargo</th>
+                                                <th scope="col">Tipo de Acesso</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>Amanda Flor</td>
+                                                <td>06/12/1997</td>
+                                                <td>94374-3222</td>
+                                                <td>Solteira</td>
+                                                <td>Gerente</td>
+                                                <td>Avançado</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>Andrezza Flor</td>
+                                                <td>29/03/1999</td>
+                                                <td>99584-2184</td>
+                                                <td>Solteira</td>
+                                                <td>Administrador</td>
+                                                <td>Intermediário</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td>Gabriela Flor</td>
+                                                <td>19/07/2000</td>
+                                                <td>94582-5847</td>
+                                                <td>Solteira</td>
+                                                <td>Operador</td>
+                                                <td>initial-scale</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+                                <!--Botão de Editar e Inabilitar-->
+                                <div class="form-group row">
+                                    <div class="col m-2 text-right">
+                                    <button type="submit" class="btn btn-primary">Editar</button>
+                                    <button type="submit" class="btn btn-secondary">Inabilitar</button>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
-                        <div class="card-body">
-                            <p>corpo</p>
-                            <button type="button" class="btn btn-primary btn-sm">Editar</button>
-                        </div>
-                        
-                        
-                    </div>
+                    </section>
                 </div>
-                
-          </div>
-        </div>
-      </section>
+                    
+            </div>
+        </section>
 
+        
     
-   
 
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-</body>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
 </html>
